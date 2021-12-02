@@ -15,7 +15,7 @@ public class Main {
 
         final float CELSIUS = 18f;
         final double FAHRENHEIT = (CELSIUS * 1.8f) + 32;
-        final double KELVIN = CELSIUS + 27.15f;
+        final double KELVIN = CELSIUS + 273.15f;
         final double REAUMUR = CELSIUS * 0.8f;
         final double RANKINE = (CELSIUS * 1.8f) + 491;
 
