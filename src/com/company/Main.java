@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.services.Calculos;
+import com.company.utils.Leitor;
+
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,17 +16,20 @@ public class Main {
 //        Re = C * 0.8
 //        Ra = (C * 1.8) + 491
 //
-//        Considere a conversão de 18 ºC e a precisão de duas casas decimais
+//        Pedir para o usuário inserir uma temperatura em celsius.
 
-        final float CELSIUS = 18f;
-        final double FAHRENHEIT = (CELSIUS * 1.8f) + 32;
-        final double KELVIN = CELSIUS + 27.15f;
-        final double REAUMUR = CELSIUS * 0.8f;
-        final double RANKINE = (CELSIUS * 1.8f) + 491;
+        float celsius = Leitor.escanearCelsius();
+
+        final float FATOR_CONVERSAO = 1.8f;
+
+        float fahrenheit= Calculos.calculaFahrenheit(celsius, FATOR_CONVERSAO);
+        float kelvin = Calculos.calculaKelvin(celsius);
+        float reaumur = Calculos.calculaReaumur(celsius);
+        float rankine = Calculos.calculaRankine(celsius, FATOR_CONVERSAO);
 
         System.out.printf("As temperaturas geradas foram: %n CELSIUS: %.2f %n FAHRENHEIT: %.2f %n KELVIN: %.2f " +
-                "%n REAUMUR: %.2f %n RANKINE: %.2f %n", CELSIUS, FAHRENHEIT, KELVIN, REAUMUR, RANKINE);
+                "%n REAUMUR: %.2f %n RANKINE: %.2f %n", celsius, fahrenheit, kelvin, reaumur, rankine);
 
-        //pedir para o usuário inserir a temperatura em celsius.
     }
+
 }
