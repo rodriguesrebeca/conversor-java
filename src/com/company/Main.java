@@ -26,7 +26,7 @@ public class Main {
         float kelvin = Calculos.calculaKelvin(celsius);
         float reaumur = Calculos.calculaReaumur(celsius);
         float rankine = Calculos.calculaRankine(celsius, FATOR_CONVERSAO);
-
+      
         System.out.printf("As temperaturas geradas foram: %n CELSIUS: %.2f %n FAHRENHEIT: %.2f %n KELVIN: %.2f " +
                 "%n REAUMUR: %.2f %n RANKINE: %.2f %n", celsius, fahrenheit, kelvin, reaumur, rankine);
 
