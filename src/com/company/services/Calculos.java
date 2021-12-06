@@ -1,7 +1,10 @@
 package com.company.services;
 
 public class Calculos {
-    public static float calculaFahrenheit(float celsius, float FATOR_CONVERSAO){
+
+
+    public static float calculaFahrenheit(float celsius){
+        final float FATOR_CONVERSAO = 1.8f;
         final float CONVERSAO_FAHRENHEIT = 32f;
         return (celsius * FATOR_CONVERSAO) + CONVERSAO_FAHRENHEIT;
     }
@@ -16,7 +19,8 @@ public class Calculos {
         return celsius * CONVERSAO_REAUMUR;
     }
 
-    public static float calculaRankine(float celsius, float FATOR_CONVERSAO){
+    public static float calculaRankine(float celsius){
+        final float FATOR_CONVERSAO = 1.8f;
         final float CONVERSAO_RANKINE = 491f;
         return (celsius * FATOR_CONVERSAO) + CONVERSAO_RANKINE;
     }
